@@ -176,7 +176,7 @@ def plot_plotly(n_rounds, y,
 
     # pio.write_image(fig, f"{name}.pdf", format="pdf", scale=6)
     # Show the plot
-    fig.show()
+    fig.show(render_mode='png')
 
 
 def plot_plotly_real(n_rounds, y, 
@@ -266,7 +266,7 @@ def plot_plotly_real(n_rounds, y,
 
     # pio.write_image(fig, f"{name}.pdf", format="pdf", scale=6)
     # Show the plot
-    fig.show()
+    fig.show(render_mode='png')
 
 def plot_plotly2(n_rounds, y_df_list, y_df1_list, y_df2_list, n_clients = 3,title='Mean Squared Error over FL Rounds', y_axis_title='Mean Squared Error', algo_name1='FedCluLearn', algo_name2='FedAvg', algo_name3='FedAtt'):
     # Create a figure
@@ -295,7 +295,7 @@ def plot_plotly2(n_rounds, y_df_list, y_df1_list, y_df2_list, n_clients = 3,titl
     )
 
     # Show the plot
-    fig.show()
+    fig.show(render_mode='png')
 
 def plot_plotly3(n_rounds, y_df_list, y_df1_list, y_df2_list, y_df3_list, n_clients = 3, model='FedCluLearn', title='Mean Squared Error over FL Rounds', y_axis_title='Mean Squared Error', y_axis_min=0, y_axis_max=1000):
     # Create a figure
@@ -333,7 +333,7 @@ def plot_plotly3(n_rounds, y_df_list, y_df1_list, y_df2_list, y_df3_list, n_clie
     )
 
     # Show the plot
-    fig.show()
+    fig.show(render_mode='png')
 
 
 def __preprocessing_results_a_client(filenames, client_id=0, mse_column='mse_cluster_0'):
