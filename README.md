@@ -79,7 +79,7 @@ All results can be seen visually in the notebooks that are in the root directory
 
 # Cite
 If you are using this code please cite this paper: \
-Angelova M., Boeva V., Abghari S., Ickin S. Lan X., FedCluLearn: Federated Continual Learning using Stream Micro-Cluster Indexing Scheme (2025).
+M. Angelova, V. Boeva, S. Abghari, S. Ickin and X. Lan. FedCluLearn: Federated Continual Learning using Stream Micro-Cluster Indexing Scheme. ECML PKDD 2025 (Porto, Portugal, 15-19 September 2025)
 
 # Email me
 Milena Angelova \
