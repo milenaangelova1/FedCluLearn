@@ -11,6 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from datetime import datetime
+import os
 
 from utils import update_model
 
@@ -244,8 +245,8 @@ sixth_shift = 300
 
 # FedCluLearn 
 
-time = datetime.now()
-algorithm_name = 'FedCluLearn_Prox'
+time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S.%f')
+algorithm_name = 'FedAvg'
 expname=f"{algorithm_name}_{time}"
 
 def _writeToFile(line, outputs: list):

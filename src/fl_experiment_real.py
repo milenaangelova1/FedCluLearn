@@ -10,6 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from datetime import datetime
+import os
 
 from utils import update_model
 
@@ -240,7 +241,7 @@ forth_shift = 200
 fifth_shift = 250
 sixth_shift = 300
 
-time = datetime.now()
+time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S.%f')
 # different algorithm names below. Choose one of them.
 # FedAvg, FedAtt, FedProx, 
 # FedCluLearn_Prox, FedCluLearn_Prox_recent, FedCluLearn_Prox_percentage

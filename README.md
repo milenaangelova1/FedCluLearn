@@ -65,17 +65,17 @@ drop_features = [label, train_data.columns[9]]
 ```
 # EDAs
 Original 5G data => https://github.com/vperifan/federated-time-series-forecasting?tab=readme-ov-file \
-notebooks/eda_5G.ipynb => 5G data 
+notebooks/eda/eda_5G.ipynb => 5G data 
 
 Original Air pollution data => https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data
-notebooks/eda_air_pollution.ipynb => Air pollution data
+notebooks/eda/eda_air_pollution.ipynb => Air pollution data
 
 # Cloud based results
 Download all results files from this link https://1drv.ms/f/s!ApMvEWIkFw9xhacX8mbwp01-P-SKAQ?e=14uwrd. \
-Unarhive the archive ```results.zip``` and them move the files into folder ```results``` in the root directory.
+Unarhive the archive ```results.zip``` and them move the files into folder ```results``` in the ```notebooks``` directory.
 
 # Plots
-All results can be seen visually in the notebooks that are in the root directory.
+All results can be seen visually in the folder ```notebooks```.
 
 # Cite
 If you are using this code please cite this paper: \
