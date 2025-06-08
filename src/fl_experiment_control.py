@@ -602,8 +602,9 @@ for i in range(n_clients):
         client_id = 'ElBorn'
 
     # 5G Data
-    train_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/5g_data/train_client_{client_id}.csv")
-    test_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/5g_data/test_client_{client_id}.csv")
+    base_path = os.path.dirname('__file__')
+    train_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'train_client_{client_id}.csv'))
+    test_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'test_client_{client_id}.csv'))
 
     # 5G data
     label = 'rnti_count'

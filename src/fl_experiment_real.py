@@ -346,14 +346,15 @@ for i in range(n_clients):
     if i == 2:
         client_id = 'ElBorn'
 
+    base_path = os.path.dirname('__file__')
     # 5G Data original
-    train_data = pd.read_csv(f"../data/5g_data/train_client_{client_id}.csv")
-    test_data = pd.read_csv(f"../data/5g_data/test_client_{client_id}.csv")
+    train_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'train_client_{client_id}.csv'))
+    test_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'test_client_{client_id}.csv'))
 
     # Air quality data
     # names = ['Aotizhongxin', 'Changping', 'Dingling', 'Dongsi', 'Guanyuan', 'Gucheng', 'Huairou', 'Nongzhanguan', 'Shunyi', 'Tiantan', 'Wanliu', 'Wanshouxigong']
-    # train_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/air_quality/train_client_{names[i]}.csv")
-    # test_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/air_quality/test_client_{names[i]}.csv")
+    # train_data = pd.read_csv(os.path.join(base_path, 'data', 'air_quality', f'train_client_{names[i]}.csv'))
+    # test_data = pd.read_csv(os.path.join(base_path, 'data', 'air_quality', f'test_client_{names[i]}.csv'))
 
     # 5G data
     label = 'rnti_count'
