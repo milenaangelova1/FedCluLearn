@@ -2,14 +2,20 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import plotly.io as pio
 import seaborn as sns
 import plotly.graph_objects as go
 import numpy as np
+import os
 
 def _read_csv(filename):
-    fl_results_df=pd.read_csv(filename, sep=";", header=None)
-    fl_results_df.columns=["fl_round","client_id","learning_rate","direction","mse","best_mse","mae","r2","lookback","num_epochs","hidden_size","batch_size"]
+    base_dir = os.path.dirname(os.path.realpath("__file__"))
+    full_path = os.path.join(base_dir, filename)
+   
+    if os.path.exists(full_path):
+        fl_results_df=pd.read_csv(filename, sep=";", header=None)
+        fl_results_df.columns=["fl_round","client_id","learning_rate","direction","mse","best_mse","mae","r2","lookback","num_epochs","hidden_size","batch_size"]
+    else:
+        raise FileNotFoundError
     return fl_results_df
 
 def draw_plot(filename: str, save_fig=False):

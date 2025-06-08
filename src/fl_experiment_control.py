@@ -11,6 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from datetime import datetime
+import os
 
 from utils import update_model
 
@@ -244,8 +245,8 @@ sixth_shift = 300
 
 # FedCluLearn 
 
-time = datetime.now()
-algorithm_name = 'FedCluLearn_Prox'
+time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S.%f')
+algorithm_name = 'FedAvg'
 expname=f"{algorithm_name}_{time}"
 
 def _writeToFile(line, outputs: list):
@@ -602,8 +603,9 @@ for i in range(n_clients):
         client_id = 'ElBorn'
 
     # 5G Data
-    train_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/5g_data/train_client_{client_id}.csv")
-    test_data = pd.read_csv(f"/Users/milenaangelova/git-repo/FedClust/notebooks/5g_data/test_client_{client_id}.csv")
+    base_path = os.path.dirname('__file__')
+    train_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'train_client_{client_id}.csv'))
+    test_data = pd.read_csv(os.path.join(base_path, 'data', '5g_data', f'test_client_{client_id}.csv'))
 
     # 5G data
     label = 'rnti_count'
